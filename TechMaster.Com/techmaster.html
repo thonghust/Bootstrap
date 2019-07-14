@@ -1,0 +1,404 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<title>TechMaster.VN</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+	<style>
+	.row1{ line-height: 50px; }
+	.trencung a{ color: grey; }
+	.font1 a{ margin-left: 3px; margin-right: 10px; }
+	.font2{ margin-left: 3px; margin-right: 7px; }
+	.trencung img{ border-radius: 5px 5px; }
+	.trencung1 a{ color: black; font-size: 16px; font-weight: bold; padding: 13px 20px 13px 20px; transition: background-color 1s; }
+	.a1{ margin-right: 30px; text-decoration: none;}
+	.trencung1 a:hover{ background-color: #008c9e; color: white; text-decoration: none; }
+	.nen1{ background-color: black; }
+	.nen2{ background-color: red; }
+	.img1{ transition: transform 0.5s }
+	.img1:hover{ transform: rotateX(360deg); }
+	.navbar-brand{ padding: 0px 0px; }
+	.navbar{ background-color: white; border: 0px; }
+	.navbar-nav>li>a{ background-color: white; color: black !important; font-weight: bold; font-size: 15px; transition: background-color 1s; }
+	.navbar-nav>li:hover>a{ background-color: #008c9e !important; color: white !important; }
+	.dropdown-menu li a{ background-color: white !important; color: #008c9e !important; font-size: 15px; font-weight: bold; }
+	.dropdown-menu li:hover a{ background-color: #008c9e !important; color: white !important; }
+	.navbar-header button{ background-color: white; border: 1px solid #008c9e; color: #008c9e; }
+	.open .dropdown-toggle{ background-color: #008c9e !important; color: white !important; }
+	.tren2{ background-image: url("logo.jpg"); }
+	.carousel-control.right, .carousel-control.left{ background-image: none;}
+	.item img{ width: 1000px !important; height: 500px !important; margin-top: 10px; margin-bottom: 10px; }
+	.table-default{ margin-left: 0px; margin-top: 25px; background-color: white; }
+	.bangchuyen{ padding: 0px 0px 0px 0px;}
+	.table-default font{ color: #049be5; font-weight: bold; }
+	.table-default p{ color: #049be5; margin-top: 6px; }
+	.table-default a:hover{ text-decoration: none; color: red; }
+	.row2 img{ width: 100%; height: 180px;}
+	.panel-default{ box-shadow: 2px 2px 10px rgba(0,0,0, .2); transition: box-shadow 0.5s; margin-bottom: 50px; }
+	.panel-default:hover{ box-shadow: 4px 4px 40px rgba(0,0,0, .2); }
+	.panel-default:hover a{ text-decoration:none; }
+	.panel-body{ padding-right: 0px; padding-left: 0px; padding-top: 0px; padding-bottom: 50px; }
+	.row2 h2{ font-weight: bold; margin-top: 50px; margin-bottom: 50px; }
+	.panel-body h3{ margin-left: 10px; margin-right: 10px; }
+	.panel-body p{ margin-left: 10px; margin-right: 10px; }
+	.panel-body a{ color: #049be5; }
+	.panel-body .a2{ color: grey; }
+	.glyphicon-facetime-video{ font-size: 60px; color: brown; transition: transform 0.5s; }
+	.glyphicon-facetime-video:hover{ transform: scale(1.3, 1.3); }
+	.glyphicon-bitcoin{ font-size: 60px; color: brown; transition: transform 0.5s; }
+	.glyphicon-bitcoin:hover{ transform: scale(1.3, 1.3); }
+	.glyphicon-briefcase{ font-size: 60px; color: brown; transition: transform 0.5s; }
+	.glyphicon-briefcase:hover{ transform: scale(1.3, 1.3); }
+	.row3{ padding-bottom: 50px; }
+	.row3 h2{ font-weight: bold; margin-bottom: 50px; margin-top: 70px; }
+	.row3 p{ color: grey; font-size: 16px; }
+	.comment{ background-image: url("footer.jpg"); }
+	.row4{ padding-top: 50px; }
+	.row4 img{ width: 100px; height: 100px; transition: transform 0.5s; }
+	.row4 img:hover{ transform: scale(1.2, 1.2); }
+	.row4 p{ color: white; font-weight: bold; margin-top: 20px; }
+	.row4 h2{ color: white; font-weight: bold; margin-bottom: 50px; }
+	.panel-body{ position: relative; }
+	.panel-body .label{ position: absolute; bottom: 5px; right: 5px; z-index: 9999; color: white; display: none; }
+	.panel-body .label .ct{ color: white; }
+	.panel-body:hover .label{ display: block; }
+	.row4 .col-sm-4{ margin-bottom: 30px; font-size: 17px; }
+	.row5{ margin-bottom: 50px; }
+	.tech2{ margin-top: 20px; }
+	.dropdown-menu li a{ font-size: 18px; }
+	.dropdown-menu{ border: 5px solid #008c9e; }
+	.row5 button{ border: 0px; transition: box-shadow 2s; }
+	.row5 button:hover{ box-shadow: 2px 2px 40px red }
+	.row6 { background-image: url("footer.jpg"); }
+	.row6 h4{ color: white; font-weight: bold; }
+	.row6 p{ color: white; }
+	.row6 img{ width: 50px; height: 50px; transition: transform 0.5s;}
+	.row6 img:hover{ transform: scale(1.2, 1.2); }
+	@media screen and (max-width: 767px)
+	{
+		.font2{ display: none; }
+		.glyphicon-envelope{ display: none; }
+		.img1{ display: none; }
+		.row3 p{ margin-bottom: 30px; }
+		.row2 .panel-default{ margin-right: 20px; margin-left: 20px;}
+		.row2 img{ width: 100%; height: auto; }
+		.item img{ width: 100%; height: 300px !important; }
+	}
+	</style>
+</head>
+<body>
+<div class="container">
+	<div class="row row1">
+		<div class="col-md-7">
+			<p class="trencung">
+				<span class="glyphicon glyphicon-earphone"></span>
+				<font class="font1"><a href="#">090 220 9011</a></font>
+				<span class="glyphicon glyphicon-envelope"></span>
+				<font class="font2"><a href="#">cuong@techmaster.vn</a></font>
+				<a href="#"><img class="img1" src="facebook.png" width="25px" height="25px"></a>
+				<a href="#"><img class="img1" src="youtube.jpg" width="25px" height="25px"></a>
+			</p>
+		</div>
+		<div class="col-md-5">
+			<div class="trencung1"><a href="#" class="a1"><span class="glyphicon glyphicon-user"></span> Đăng nhập</a><a href="#" class="a1"><span class="glyphicon glyphicon-log-in"></span> Đăng ký</a></div>
+		</div>
+	</div>
+	<div class="row">
+		<nav class="navbar navbar-default">
+			<div class="navbar-header">
+				<button class="navbar-toggle" data-toggle="collapse" data-target="#mycollapse">
+					<span class="glyphicon glyphicon-align-justify"></span>
+				</button>
+				<div class="navbar-brand">
+					<a href="#"><img src="logo.png"></a>
+				</div>
+			</div>
+			<div class="collpapse navbar-collapse" id="mycollapse">
+				<ul class="nav navbar-nav navbar-right">
+					<li><a href="#"><span class="glyphicon glyphicon-home"></span> Trang chủ</a></li>
+					<li><a href="#"><span class="glyphicon glyphicon-education"></span> Khóa học</a></li>
+					<li><a href="#"><span class="glyphicon glyphicon-duplicate"></span> Lịch khai giảng</a></li>
+					<li><a href="#"><span class="glyphicon glyphicon-question-sign"></span> Q & A</a></li>
+					<li><a href="#"><span class="glyphicon glyphicon-globe"></span> Blog</a></li>
+					<li><a href="#"><span class="glyphicon glyphicon-usd"></span> Việc làm</a></li>
+					<li><a href="#"><span class="glyphicon glyphicon-star-empty"></span> Phỏng vấn</a></li>
+					<li class="dropdown"><a href="#" class="dropdown-toggle" data-toggle="dropdown"><span class="glyphicon glyphicon-envelope"></span> Chúng tôi <span class="caret cr"></span></a>
+						<ul class="dropdown-menu">
+							<li><a href="#">Trung tâm</a></li>
+							<li><a href="#">Quy định chung</a></li>
+							<li><a href="#">Giảng viên</a></li>
+							<li><a href="#">Trung tâm</a></li>
+							<li><a href="#">Tuyển dụng giảng viên</a></li>
+							<li><a href="#">Thiết bị đào tạo</a></li>
+							<li><a href="#">Khách hàng - đối tác</a></li>
+							<li><a href="#">Chơi thể thao</a></li>
+							<li><a href="#">Team building - Royal City</a></li>
+							<li><a href="#">Video hoạt động</a></li>
+						</ul>
+					</li>
+				</ul>
+			</div>
+		</nav>
+	</div>
+</div>
+<div class="container-fluid tren2">
+	<div class="container bangchuyen">
+		<div class="row">
+			<div class="col-sm-8">
+				<div id="mycarousel" class="carousel slide" data-ride="carousel">
+					<ol class="carousel-indicators">
+						<li data-target="#mycarousel" data-slide-to="0" class="active"></li>
+						<li data-target="#mycarousel" data-slide-to="1"></li>
+						<li data-target="#mycarousel" data-slide-to="2"></li>
+					</ol>
+					<div class="carousel-inner">
+						<div class="item active">
+							<a href="#"><img src="ca1.jpg"></a>
+						</div>
+						<div class="item">
+							<a href="#"><img src="ca2.jpg"></a>
+						</div>
+						<div class="item">
+							<a href="#"><img src="ca3.jpg"></a>
+						</div>
+					</div>
+					<a class="left carousel-control" href="#mycarousel" data-slide="prev">
+						<span class="glyphicon glyphicon-chevron-left"></span>
+					</a>
+					<a class="right carousel-control" href="#mycarousel" data-slide="next">
+						<span class="glyphicon glyphicon-chevron-right"></span>
+					</a>	
+				</div>
+			</div>
+			<div class="col-sm-4">
+				<table class="table table-default">
+					<tr>
+						<td><img src="icon1.jpg" width="50px" height="50px" class="img-circle"></td>
+						<td>
+							<a href="#"><font>Techmaster tuyển nhân viên tuyển sinh đào tạo CNTT</font></a>
+							<a href="#"><p>Techmaster Team</p></a>
+						</td>
+					</tr>
+					<tr>
+						<td><img src="icon2.jpg" width="50px" height="50px" class="img-circle"></td>
+						<td>
+							<a href="#"><font>Khai giảng khóa học Web FontEnd cho người mới bắt đầu</font></a>
+							<a href="#"><p>Techmaster Team</p></a>
+						</td>
+					</tr>
+					<tr>
+						<td><img src="icon3.jpg" width="50px" height="50px" class="img-circle"></td>
+						<td>
+							<a href="#"><font>Yêu cầu đối với đồ án tốt nghiệp lớp Web FontEnd</font></a>
+							<a href="#"><p>Techmaster Team</p></a>
+						</td>
+					</tr>
+					<tr>
+						<td><img src="icon4.jpg" width="50px" height="50px" class="img-circle"></td>
+						<td>
+							<a href="#"><font>Event Sourcing: Thương em là điều anh không thể ngờ</font></a>
+							<a href="#"><p>Techmaster Team</p></a>
+						</td>
+					</tr>
+					<tr>
+						<td><img src="icon1.jpg" width="50px" height="50px" class="img-circle"></td>
+						<td>
+							<a href="#"><font>Techmaster tuyển nhân viên tuyển sinh đào tạo CNTT</font></a>
+							<a href="#"><p>Techmaster Team</p></a>
+						</td>
+					</tr>
+				</table>
+			</div>
+		</div>
+	</div>
+</div>
+<div class="container">
+	<div class="row row2">
+		<h2 class="text-center">KHÓA HỌC HOT</h2>
+		<div class="col-sm-3">
+			<div class="panel panel-default">
+				<div class="panel-body">
+					<a href="#"><img src="hot1.jpg"></a>
+					<h3><a href="#">Web FontEnd cho người mới học</a></h3>
+					<hr>
+					<a href="#" class="a2"><p>Hình thức học - Kết hợp giữa giáo trình trực tuyến và hướng dẫn tại phòng lab. Học viên có...</p></a>
+					<span class="label label-primary"><a href="#" class="ct">Xem chi tiết <span class="glyphicon glyphicon-eye-open"></span></a></span>
+				</div>
+			</div>
+		</div>
+		<div class="col-sm-3">
+			<div class="panel panel-default">
+				<div class="panel-body">
+					<a href="#"><img src="hot2.jpg"></a>
+					<h3><a href="#">Lập trình iOS Swift 8 buổi</a></h3>
+					<hr>
+					<a href="#" class="a2"><p>Khóa học lập trình IOS căn bản và thực hành code ứng dụng thực tế ngay tại lớp, sau khóa...</p></a>
+					<span class="label label-danger"><a href="#" class="ct">Xem chi tiết <span class="glyphicon glyphicon-eye-open"></span></a></span>
+				</div>
+			</div>
+		</div>
+		<div class="col-sm-3">
+			<div class="panel panel-default">
+				<div class="panel-body">
+					<a href="#"><img src="hot3.png"></a>
+					<h3><a href="#">Lập trình Java thực hành</a></h3>
+					<hr>
+					<a href="#" class="a2"><p>Khóa học Java thực hành 8 buổi cho mọi đối tượng. Ví dụ mẫu, dự án thực hành demo, Java vẫn là lựa...</p></a>
+					<span class="label label-success"><a href="#" class="ct">Xem chi tiết <span class="glyphicon glyphicon-eye-open"></span></a></span>
+				</div>
+			</div>
+		</div>
+		<div class="col-sm-3">
+			<div class="panel panel-default">
+				<div class="panel-body">
+					<a href="#"><img src="hot4.jpg"></a>
+					<h3><a href="#">Lập trình Node JS thực hành</a></h3>
+					<hr>
+					<a href="#" class="a2"><p>Node JS được Ryan Dahl giới thiệu 2009 cho phép lập trình JavaScript phía server. Trước đây...</p></a>
+					<span class="label label-info"><a href="#" class="ct">Xem chi tiết <span class="glyphicon glyphicon-eye-open"></span></a></span>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+<div class="container">
+	<div class="row row2">
+		<h2 class="text-center">KHÓA HỌC MỚI</h2>
+		<div class="col-sm-3">
+			<div class="panel panel-default">
+				<div class="panel-body">
+					<a href="#"><img src="new1.jpg" class="img img-responsive"></a>
+					<h3><a href="#">Web FontEnd cho người mới học</a></h3>
+					<hr>
+					<a href="#" class="a2"><p>Hình thức học - Kết hợp giữa giáo trình trực tuyến và hướng dẫn tại phòng lab. Học viên có...</p></a>
+					<span class="label label-info"><a href="#" class="ct">Xem chi tiết <span class="glyphicon glyphicon-eye-open"></span></a></span>
+				</div>
+			</div>
+		</div>
+		<div class="col-sm-3">
+			<div class="panel panel-default">
+				<div class="panel-body">
+					<a href="#"><img src="new2.png" class="img img-responsive"></a>
+					<h3><a href="#">Phân tích - Thiết kế- SQL Server</a></h3>
+					<hr>
+					<a href="#" class="a2"><p>Khóa học lập trình IOS căn bản và thực hành code ứng dụng thực tế ngay tại lớp, sau khóa...</p></a>
+					<span class="label label-warning"><a href="#" class="ct">Xem chi tiết <span class="glyphicon glyphicon-eye-open"></span></a></span>
+				</div>
+			</div>
+		</div>
+		<div class="col-sm-3">
+			<div class="panel panel-default">
+				<div class="panel-body">
+					<a href="#"><img src="new3.png" class="img img-responsive"></a>
+					<h3><a href="#">Thiết kế UI/UX cho phần mềm</a></h3>
+					<hr>
+					<a href="#" class="a2"><p>Khóa học Java thực hành 8 buổi cho mọi đối tượng. Ví dụ mẫu, dự án thực hành demo, Java vẫn là lựa...</p></a>
+					<span class="label label-primary"><a href="#" class="ct">Xem chi tiết <span class="glyphicon glyphicon-eye-open"></span></a></span>
+				</div>
+			</div>
+		</div>
+		<div class="col-sm-3">
+			<div class="panel panel-default">
+				<div class="panel-body">
+					<a href="#"><img src="hot4.jpg" class="img img-responsive"></a>
+					<h3><a href="#">Lập trình Node JS thực hành</a></h3>
+					<hr>
+					<a href="#" class="a2"><p>Node JS được Ryan Dahl giới thiệu 2009 cho phép lập trình JavaScript phía server. Trước đây...</p></a>
+					<span class="label label-default"><a href="#" class="ct">Xem chi tiết <span class="glyphicon glyphicon-eye-open"></span></a></span>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+<div class="container">
+	<div class="row row3 text-center">
+		<h2 class="text-center">HỌC Ở TECHMASTER NHƯ THẾ NÀO</h2>
+		<div class="col-sm-4">
+			<a href="#"><span class="glyphicon glyphicon-facetime-video"></span></a>
+			<h3>Xem Video</h3>
+			<p>Luôn luôn phát triển, luôn cập nhật những công nghệ mới nhất</p>
+		</div>
+		<div class="col-sm-4">
+			<a href="#"><span class="glyphicon glyphicon-bitcoin"></span></a>
+			<h3>Code Code Code</h3>
+			<p>Đầy đủ thông tin, hài hước. Rất nhiều mẹo trong video sẽ hữu ích cho bạn trong quá trình lập trình</p>
+		</div>
+		<div class="col-sm-4">
+			<a href="#"><span class="glyphicon glyphicon-briefcase"></span></a>
+			<h3>Làm Project thật</h3>
+			<p>Được tham gia làm các dự án, sản phẩm thực tế dưới sự hướng dẫn của giảng viên</p>
+		</div>
+	</div>
+</div>
+<div class="container-fluid comment">
+	<div class="row">
+		<div class="container">
+			<div class="row row4 text-center">
+				<h2 class="kh">KHÁCH HÀNG NÓI GÌ?</h2>
+				<div class="col-sm-4">
+					<a href="#"><img src="obama.jpg" class="img-circle"></a>
+					<p>Chất lượng tốt, dễ hiểu, dễ thực hành. - Em mới học anh Cường thì thấy sự nhiệt huyết, tận tình hướng dẫn, đôn đốc học viên làm bài tập. Quan trọng hơn nữa là cách truyền lửa cho lứa đàn em học tập...</p>
+				</div>
+				<div class="col-sm-4">
+					<a href="#"><img src="kim.jfif" class="img-circle"></a>
+					<p>Nội dung mới và khác biệt so với các khoá học swift khác. Truyền được lửa cho học sinh. Bài giảng cũng như chương trình học có format rõ ràng. Nội dung giảng dạy luôn cập nhật công nghệ mới... </p>
+				</div>
+				<div class="col-sm-4">
+					<a href="#"><img src="trump.jpg" class="img-circle"></a>
+					<p>Bài giảng cũng như chương trình học có format rõ ràng. Nội dung giảng dạy luôn cập nhật công nghệ mới, bao quát hết các vấn đề của ngôn ngữ trong chương trình học và các kiến thức liên quan như...</p>
+				</div>
+			</div>
+			<div class="row row5 text-center">
+				<button class="btn btn-danger btn-lg tech2"><span class="glyphicon glyphicon-comment"></span> GỬI CHIA SẺ CỦA BẠN</button>
+			</div>
+		</div>
+	</div>
+</div>
+<div class="container-fluid row6">
+	<div class="row">
+		<div class="container">
+			<div class="row">
+				<div class="col-sm-3">
+					<h4>Chủ sở hữu website</h4>
+					<p>Công ty TNHH TechMaster Vietnam Ltd</p>
+					<p>Số ĐKDN: 0105392153</p>
+					<p>Ngày cấp</p>
+					<p>Nơi cấp: Sở kế hoạch - đầu tư Hà Nội</p>
+					<p>Người đại diện pháp luật: Lê Minh Thư</p>
+					<p>Chịu trách nhiệm nội dung: Trịnh Minh Cường</p>
+				</div>
+				<div class="col-sm-3">
+					<h4>Thông tin chung</h4>
+					<p>Thông tin trung tâm<br>
+						Giảng viên<br>
+						Quy định<br>
+						Hướng dẫn mua khóa học<br>
+						Hoàn trả - Ưu đãi học phí<br>
+						Chính sách bảo vệ thông tin khách hàng</p>
+				</div>
+				<div class="col-sm-3">
+					<h4>Contact</h4>
+					<p><span class="glyphicon glyphicon-earphone"></span> Ms.Huyền (Zalo): 038 309 7229<br>
+						<span class="glyphicon glyphicon-envelope"></span> huyen@techmaster.vn<br>
+						<span class="glyphicon glyphicon-phone"></span> Mr.Cường (Zalo): 090 220 9011<br>
+						<span class="glyphicon glyphicon-envelope"></span> cuong@techmaster.vn</p><br>
+						<a href="#"><img src="facebook.png" class="img-circle"></a> <a href="#"><img src="youtube.jpg" class="img-circle"></a> <a href="#"><img src="skype.png" class="img-circle"></a> <a href="#"><img src="twitter.png" class="img-circle"></a>
+				</div>
+				<div class="col-sm-3">
+					<h4>Địa chỉ</h4>
+					<p>Số 14, ngõ 4, Nguyễn Đình Chiểu, Hai Bà Trưng, Hà Nội<br>
+						Giờ mở cửa: từ 9:30 - 18:00<br>
+						48 Tố Hữu, Trung Văn, Nam Từ Liêm, Hà Nội<br>
+						Giờ mở cửa: từ 9:30 - 18:00<br>
+						TTTM V+ Hòa Bình, 505 Minh Khai, quận Hai Bà Trưng, Hà Nội (Y-NEST CO-WORKING SPACE )<br>
+						Giờ mở cửa: từ 9:30 - 18:00<br>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+</body>
+</html>

@@ -1,0 +1,534 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<title>Tiếng Anh Online</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+	<style>
+	body{ background-color: #e64946; font-family: Segoe UI}
+	.row2 .col-sm-4{ padding-top: 20px; padding-left: 10px; padding-bottom: 20px; }
+	.row2 button{ padding: 7px 70px 7px 70px; }
+	.row2 h3 a{ color: #37474f; font-weight: bold; }
+	.row2 p a{ color: grey; }
+	.panel-default{ margin-bottom: 0px;}
+	.row3 .navbar-inverse{ margin-top: 0px !important; background-color: #2a2a2a; border: 0px; margin-bottom: 0px;}
+	.row3 .navbar-nav>li>a{ color: white !important; font-weight: bold; background-color: #2a2a2a; transition: background-color 0.5s; }
+	.row3 .navbar-nav>li:hover>a{ background-color: #e64946 !important; color: white !important; }
+	.dropdown-menu li a{ background-color: #2a2a2a !important; color: white !important; font-size: 17px; font-weight: bold; line-height: 30px; transition: background-color 0.5s;}
+	.dropdown-menu{ padding-top: 0px; padding-bottom: 0px; }
+	.dropdown-menu li:hover a{ background-color: #e64946 !important; color: white !important; }
+	.open .dropdown-toggle{ background-color: #e64946 !important; color: white !important; }
+	.navbar-header button{ color: white !important; font-weight: bold; }
+	.navbar-header button:hover{ color: #2a2a2a !important; background-color: white !important; }
+	.row4 font{ padding: 10px 30px 10px 30px; color: white; }
+	.navbar-brand{ display: none; }
+	.navbar-brand a{ color: white !important; }
+	.navbar-brand a:hover{ text-decoration: none; }
+	.row5{ background-color: white; }
+	.baimoi{ float: left; background-color: #e64946; color: white; line-height: 35px; font-weight: bold; padding-left: 20px; padding-right: 20px; border: 1px solid #e64946 }
+	.quangcao{ color: black; line-height: 35px; margin-left: 130px; }
+	.row5{ background-color: #f5f5f5; }
+	.row5 input{ height: 28px; margin-top: 9px; font-size: 10px; }
+	.row5 button{ margin-top: 9px; height: 28px; }
+	.row6{ background-color: white; margin-bottom: 0px; margin-top: 0px; }
+	.row6 .well{ background-color: #e64946; color: white; border-top: 2px dashed white; border-bottom: 2px dashed white; margin-top: 20px; margin-bottom: 20px; padding-top: 10px; padding-bottom: 10px; font-weight: bold; }
+	.row6 .panel-body{ padding: 0px 0px 5px 0px; }
+	.row6 .panel{ border: 0px; }
+	.row6 .panel-body a{ color: black; }
+	.row6 .panel-body a:hover{ color: #e64946; text-decoration: none; }
+	.table a{ color: black; }
+	.table a:hover{ color:  #e64946; text-decoration: none; }
+	.row5 .col-sm-9{margin-top: 10px;}
+	.well1 input{ font-size: 13px; height: 30px;}
+	.nav-tabs{ border-bottom: 3px solid #e64946; }
+	.nav-tabs li a{ font-size: 30px; text-align: center; color: black; }
+	.nav-tabs li:hover a{ color: #e64946; background-color: #f5f5f5; }
+	.nav-tabs li{ width: 33.3%;}
+	.nav-tabs li.active a{ background-color: #e64946 !important; color: white !important; }
+	.navtab{ background-color: #f5f5f5; }
+	.tudien{ background-color: #f5f5f5 !important; }
+	.tab2{ color: white; background-color: black; }
+	.tab2 a{ color: white; background-color: black; padding: 8px 3px 8px 3px; }
+	.menu2 a{ background-color: #2a2a2a; color: white; font-weight: bold; border: 0px; margin-top: 7px; transition: background-color 0.5s; }
+	.menu2 a:hover{ background-color: #e64946; }
+	.menu2{ padding-top: 20px; padding-bottom: 27px; }
+	.menu3{ padding-top: 20px; padding-bottom: 20px; margin-left: 20px; overflow: auto !important; height: 400px; }
+	.cmt{ border-radius: 40px; padding: 30px 20px 30px 20px; border: 0px; font-style: italic; background-color: white; width: 90%; }
+	.menu3 a{ color: black; }
+	.menu3 a:hover{ text-decoration: none; color: #e64946; }
+	.thumbnail{ border: 0px; }
+	.thumbnail img{ opacity: 0.8; transition: opacity 1s; }
+	.thumbnail img:hover{ opacity: 1; transition: opacity 1s; }
+	.cuoi{ margin-bottom: 35px; }
+	.tab-content{ height: 400px; }
+	.row9{ color: grey; background-color: #2a2a2a; padding-top: 10px; margin-top: 0px; }
+	.row10{ background-color: #6a6a6a; height: 5px; }
+	.row6 .panel-body{ overflow: hidden; }
+	.row6 .panel-body img{ transition: transform 2s; }
+	.row6 .panel-body img:hover{ transform: scale(1.2, 1.2); }
+	.row6 .table{ overflow: hidden; }
+	.row6 .table img{ transition: transform 2s }
+	.row6 .table img:hover{ transform: scale(1.2, 1.2); }
+	@media screen and (max-width: 767px)
+	{
+		.row5{padding-bottom: 10px;}
+		.navbar-brand{ display: block; }
+		.row6 .well{ margin-top: 0px !important; }
+		.row5 .input-group{ margin-top: 10px; }
+		body{ background-color: white; }
+		.well1 input{ margin-bottom: 20px; }
+		select{ margin-bottom: 20px; }
+		.row8{ display: none; }
+	}
+	@media screen and (max-width: 1200px)
+	{
+		body{ background-color: white; }
+		.menu2 a{ font-size: 11px; }
+	}
+ 	</style>
+</head>
+<body>
+<div class="container">
+	<div class="row row1">
+		<a href="#"><img src="logo.jpg" width="100%"></a>
+		<div class="panel panel-default">
+			<div class="panel-body">
+				<div class="row row2">
+					<div class="col-sm-8 text-center">
+						<h3><a href="#">Học tiếng anh tại Philipines - Những điều bạn cần biết 2019</a></h3>
+						<p><a href="#">100% Tiếng Anh lưu loát sau 2 tháng - ĐK học thử miễn phí 2 tuần tại Philipines duhocphilipines.edu.vn</a></p>
+					</div>
+					<div class="col-sm-4 text-center">
+						<button class="btn btn-primary">Mở</button>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+<div class="container">
+	<div class="row row3">
+		<nav class="navbar navbar-inverse">
+			<div class="navbar-header">
+				<button class="navbar-toggle" data-toggle="collapse" data-target="#mycollapse">
+					MENU <span class="glyphicon glyphicon-menu-hamburger"></span>
+				</button>
+				<div class="navbar-brand">
+					<a href="#"><span class="glyphicon glyphicon-home"></span> HỌC TIẾNG ANH ONLINE</a>
+				</div>
+			</div>
+			<div class="collapse navbar-collapse" id="mycollapse">
+				<ul class="nav navbar-nav">
+					<li><a href="#">TRANG CHỦ</a></li>
+					<li><a href="#">PHÁT ÂM</a></li>
+					<li class="dropdown"><a href="#" class="dropdown-toggle" data-toggle="dropdown">TỪ VỰNG <span class="glyphicon glyphicon-chevron-down"></span></a>
+						<ul class="dropdown-menu">
+							<li><a href="#">TỪ VỰNG CƠ BẢN</a></li>
+							<li><a href="#">TỪ VỰNG THEO CHỦ ĐỀ</a></li>
+							<li><a href="#">TỪ VỰNG NÂNG CAO</a></li>
+						</ul>
+					</li>
+					<li><a href="#">NGỮ PHÁP</a></li>
+					<li><a href="#">THÀNH NGỮ</a></li>
+					<li class="dropdown"><a href="#" class="dropdown-toggle" data-toggle="dropdown">BÀI TẬP <span class="glyphicon glyphicon-chevron-down"></span></a>
+						<ul class="dropdown-menu">
+							<li><a href="#">BÀI TẬP NGỮ PHÁP</a></li>
+							<li><a href="#">BÀI TẬP TỪ VỰNG</a></li>
+							<li><a href="#">BÀI TẬP THÀNH NGỮ</a></li>
+							<li><a href="#">ĐỀ THI ITELS LISTENING</a></li>
+							<li><a href="#">ĐỀ THI ITELS READING</a></li>
+						</ul>
+					</li>
+					<li class="dropdown"><a href="#" class="dropdown-toggle" data-toggle="dropdown">THAM KHẢO THÊM <span class="glyphicon glyphicon-chevron-down"></span></a>
+						<ul class="dropdown-menu">
+							<li><a href="#">GIẢI TRÍ</a></li>
+						</ul>
+					</li>
+					<li><a href="#">HỎI ĐÁP</a></li>
+				</ul>
+			</div>
+		</nav>
+	</div>
+</div>
+<div class="container">
+	<div class="row row5">
+		<div class="col-sm-9">
+			<div class="baimoi">
+				BÀI MỚI <span class="glyphicon glyphicon-chevron-right"></span>
+			</div>
+			<div class="quangcao">
+				<small>Học 180 từ vựng trong vòng 1 ngày <span class="glyphicon glyphicon-play"></span> Học từ vựng</small>
+			</div>
+		</div>
+		<div class="col-sm-3 text-center">
+			<form class="form-inline">
+				<div class="input-group">
+					<input type="text" placeholder="TÌM KIẾM..." class="form-control">
+					<div class="input-group-btn">
+						<button class="btn btn-default btn-sm"><span class="glyphicon glyphicon-search"></span></button>
+					</div>
+				</div>
+			</form>
+		</div>
+	</div>
+</div>
+<div class="container">
+	<div class="row row7">
+		<div class="col-sm-4 row6">
+			<div class="well text-center">
+				TỪ VỰNG TIẾNG ANH
+			</div>
+			<div class="panel-default">
+				<div class="panel-body anh">
+					<a href="#"><img src="a1.jpg" width="100%" height="100%"></a>
+				</div>
+				<div class="panel-body">
+					<a href="#"><h3><b>24 Từ vựng tiếng Anh chủ đề các loại hạt</b></h3></a>
+					<p>24 Từ vựng tiếng Anh chủ đề Các loại hạt almond /ˈɑːmənd/: hạt hạnh nhân basil seeds /ˈbeɪzlsiːdz/: hạt é black beans /blækbiːnz/: hạt đậu đen cashew nuts /ˈkæʃuːnʌts/: hạt <a href="#">[Đọc tiếp]</a></p>
+				</div>
+			</div>
+			<table class="table">
+				<tr>
+					<td><a href="#"><img src="a3.jpg" width="100px"></a></td>
+					<td><a href="#"><h5><b>12 Từ vựng tiếng Anh chủ đề 12 Con Giáp</b></h5></a></td>
+				</tr>
+				<tr>
+					<td><a href="#"><img src="a5.jpg" width="100px"></a></td>
+					<td><a href="#"><h5><b>11 Từ vựng tiếng Anh chủ đề cấu tạo cơ thể</b></h5></a></td>
+				</tr>
+				<tr>
+					<td><a href="#"><img src="a6.jpg" width="100px"></a></td>
+					<td><a href="#"><h5><b>40 Từ vựng tiếng Anh chủ đề các phương tiện giao thông</b></h5></a></td>
+				</tr>
+				<tr>
+					<td><a href="#"><img src="a7.jpg" width="100px"></a></td>
+					<td><a href="#"><h5><b>45 Từ vựng tiếng Anh chủ đề các loài cá</b></h5></a></td>
+				</tr>
+			</table>
+			<div class="well text-center">
+				PHÁT ÂM TIẾNG ANH
+			</div>
+			<div class="panel-default">
+				<div class="panel-body">
+					<a href="#"><img src="b1.jpg" width="100%"></a>
+				</div>
+				<div class="panel-body">
+					<a href="#"><h3><b>20 Quy tắc phát âm tiếng Anh chuẩn hiệu quả ngay</b></h3></a>
+					<p>20 Quy Tắc Phát Âm Tiếng Anh Giúp Bạn Phát Âm Chuẩn Ngay Lập Tức  Quy tắc 1: Luôn đọc âm cuối as sometimes because is was has which such as always <a href="#">[Đọc tiếp]</a></p>
+				</div>
+			</div>
+			<table class="table">
+				<tr>
+					<td><a href="#"><img src="b2.png" width="100px"></a></td>
+					<td><a href="#"><h5><b>10 QUY TẮC ITELS SPEAKING CẦN ÁP DỤNG ĐỂ ĐẠT ĐIỂM CAO</b></h5></a></td>
+				</tr>
+				<tr>
+					<td><a href="#"><img src="b3.png" width="100px"></a></td>
+					<td><a href="#"><h5><b>Cách đọc âm ED cuối trong tiếng Anh</b></h5></a></td>
+				</tr>
+				<tr>
+					<td><a href="#"><img src="b3.png" width="100px"></a></td>
+					<td><a href="#"><h5><b>Cách đọc âm s cuối trong tiếng Anh</b></h5></a></td>
+				</tr>
+				<tr>
+					<td><a href="#"><img src="b3.png" width="100px"></a></td>
+					<td><a href="#"><h5><b>Tại sao phải luyện phát âm tiếng Anh chuẩn</b></h5></a></td>
+				</tr>
+			</table>
+			<div class="well text-center">
+				KINH NGHIỆM HỌC
+			</div>
+			<div class="panel-default">
+				<div class="panel-body">
+					<a href="#"><img src="c1.png" width="100%"></a>
+				</div>
+				<div class="panel-body">
+					<a href="#"><h3><b>Giới thiệu Quizlet - công cụ học từ mới thông minh</b></h3></a>
+					<p>GIỚI THIỆU QUIZLET, CÔNG CỤ HỌC TỪ MỚI THÔNG MINH QUIZLET là công cụ học từ vựng bằng thẻ từ (flashcard) hoặc chơi nhiều trò chơi thú vị, giúp bạn dễ nhớ từ <a href="#">[Đọc tiếp]</a></p>
+				</div>
+			</div>
+			<table class="table">
+				<tr>
+					<td><a href="#"><img src="c2.png" width="100px"></a></td>
+					<td><a href="#"><h5><b>Những lời khuyên về các kỹ năng học tiếng Anh</b></h5></a></td>
+				</tr>
+				<tr>
+					<td><a href="#"><img src="c3.png" width="100px"></a></td>
+					<td><a href="#"><h5><b>Dành cho các bạn chưa biết về ITELS</b></h5></a></td>
+				</tr>
+				<tr>
+					<td><a href="#"><img src="c4.png" width="100px"></a></td>
+					<td><a href="#"><h5><b>Bí quyết giỏi tiếng Anh thật sự</b></h5></a></td>
+				</tr>
+				<tr>
+					<td><a href="#"><img src="c4.png" width="100px"></a></td>
+					<td><a href="#"><h5><b>4 Bí quyết cực hay để nhớ nhiều từ vựng tiếng Anh</b></h5></a></td>
+				</tr>
+			</table>
+		</div>
+		<div class="col-sm-4 row6">
+			<div class="well text-center">
+				NGỮ PHÁP TIẾNG ANH
+			</div>
+			<div class="panel-default">
+				<div class="panel-body">
+					<a href="#"><img src="d1.png" width="100%"></a>
+				</div>
+				<div class="panel-body">
+					<a href="#"><h3><b>Phân biệt JUST và ONLY giữa EVEN và EVER</b></h3></a>
+					<p>Just và Only là hai trạng từ có thể được thay thế nhau trong nhiều trường hợp khi chúng cùng có nghĩa “chỉ”. Tuy nhiên, Just và Only có nhiều sắc thái nghĩa và cách dùng khác<a href="#">[Đọc tiếp]</a></p>
+				</div>
+			</div>
+			<table class="table">
+				<tr>
+					<td><a href="#"><img src="d2.png" width="100px"></a></td>
+					<td><a href="#"><h5><b>3 Loại mệnh đề quan hệ WHICH</b></h5></a></td>
+				</tr>
+				<tr>
+					<td><a href="#"><img src="d2.png" width="100px"></a></td>
+					<td><a href="#"><h5><b>7 Cách dùng OR trong tiếng Anh</b></h5></a></td>
+				</tr>
+				<tr>
+					<td><a href="#"><img src="d2.png" width="100px"></a></td>
+					<td><a href="#"><h5><b>Cấu trúc There is/There are trong tiếng Anh</b></h5></a></td>
+				</tr>
+				<tr>
+					<td><a href="#"><img src="d2.png" width="100px"></a></td>
+					<td><a href="#"><h5><b>Những động từ và Thành ngữ sử dụng Subjunctive</b></h5></a></td>
+				</tr>
+			</table>
+			<div class="well text-center">
+				THÀNH NGỮ TIẾNG ANH
+			</div>
+			<div class="panel-default">
+				<div class="panel-body">
+					<a href="#"><img src="e1.png" width="100%"></a>
+				</div>
+				<div class="panel-body">
+					<a href="#"><h3><b>10 Thành ngữ có từ SO trong tiếng Anh</b></h3></a>
+					<p>10 thành ngữ có từ SO trong tiếng Anh Từ SO là một trong những từ phổ biến nhất tiếng Anh, được dùng hàng ngày. Trong bài này chúng ta sometimes because is was has <a href="#">[Đọc tiếp]</a></p>
+				</div>
+			</div>
+			<table class="table">
+				<tr>
+					<td><a href="#"><img src="e2.png" width="100px"></a></td>
+					<td><a href="#"><h5><b>Những thành ngữ trong tiếng Anh cơ bản nhất</b></h5></a></td>
+				</tr>
+				<tr>
+					<td><a href="#"><img src="e2.png" width="100px"></a></td>
+					<td><a href="#"><h5><b>22 Thành ngữ tiếng Anh có liên quan đến mắt</b></h5></a></td>
+				</tr>
+				<tr>
+					<td><a href="#"><img src="e2.png" width="100px"></a></td>
+					<td><a href="#"><h5><b>100 Phrasal Verb quan trọng nhất trong tiếng Anh</b></h5></a></td>
+				</tr>
+				<tr>
+					<td><a href="#"><img src="e3.jpg" width="100px"></a></td>
+					<td><a href="#"><h5><b>Năm con Chó học thành ngữ tiếng Anh có từ Dog</b></h5></a></td>
+				</tr>
+			</table>
+			<div class="well text-center">
+				THAM KHẢO THÊM
+			</div>
+			<div class="panel-default">
+				<div class="panel-body">
+					<a href="#"><img src="f1.jpg" width="100%"></a>
+				</div>
+				<div class="panel-body">
+					<a href="#"><h3><b>Phân biệt Percent, Percentage và Percentile</b></h3></a>
+					<p>Percent là gì? Percentage là gì? Percentile là gì? Bài viết này sẽ giúp bạn phân biệt Percent, Percentage và Percentile, 3 từ rất dễ nhầm lẫn trong tiếng Anh. <a href="#">[Đọc tiếp]</a></p>
+				</div>
+			</div>
+			<table class="table">
+				<tr>
+					<td><a href="#"><img src="f2.png" width="100px"></a></td>
+					<td><a href="#"><h5><b>10 Quy tắc ITELS SPEAKING để đạt điểm cao</b></h5></a></td>
+				</tr>
+				<tr>
+					<td><a href="#"><img src="f2.png" width="100px"></a></td>
+					<td><a href="#"><h5><b>Tìm hiểu về tiền tố PAN và những từ có tiền tố</b></h5></a></td>
+				</tr>
+				<tr>
+					<td><a href="#"><img src="f3.jpg" width="100px"></a></td>
+					<td><a href="#"><h5><b>Tìm hiểu 4 từ wise, sentient, conscious</b></h5></a></td>
+				</tr>
+				<tr>
+					<td><a href="#"><img src="f4.png" width="100px"></a></td>
+					<td><a href="#"><h5><b>Đọc bài The Way To Wealth của Franklin</b></h5></a></td>
+				</tr>
+			</table>
+		</div>
+		<div class="col-sm-4 row6">
+			<div class="well text-center">
+				HỌC ITEL Ở ĐÂU UY TÍN?
+			</div>
+			<div class="thumbnail">
+				<a href="#"><img src="itel.jpg" width="100%" class="img img-responsive"></a>
+			</div>
+			<div class="well text-center">
+				TRA TỪ ĐIỂN CÂU VIỆT ANH
+			</div>
+			<div class="tudien">
+				<div class="well1 text-center">
+					<input type="text" placeholder="TRA TỪ ĐIỂN..." class="form-control">
+				</div>
+			</div>
+			<div class="well text-center">
+				MỚI CẬP NHẬT
+			</div>
+			<div class="navtab">
+				<ul class="nav nav-tabs">
+					 <li><a data-toggle="tab" href="#home"><span class="glyphicon glyphicon-list-alt"></span></a></li>
+					 <li class="active"><a data-toggle="tab" href="#menu1"><span class="glyphicon glyphicon-tags"></span></a></li>
+					 <li><a data-toggle="tab" href="#menu2"><span class="glyphicon glyphicon-comment"></span></a></li>
+				</ul>
+
+				<div class="tab-content">
+					 <div id="home" class="tab-pane fade">
+					 	<table class="table">
+					 		<tr>
+					 			<td><a href="#">Thử thách dịch 89</a></td>
+					 		</tr>
+					 		<tr>
+					 			<td><a href="#">Thử thách dịch 88</a></td>
+					 		</tr>
+					 		<tr>
+					 			<td><a href="#">Thử thách dịch 87</a></td>
+					 		</tr>
+					 		<tr>
+					 			<td><a href="#">Thử thách dịch 86</a></td>
+					 		</tr>
+					 		<tr>
+					 			<td><a href="#">Thử thách dịch 85</a></td>
+					 		</tr>
+					 		<tr>
+					 			<td><a href="#">Thử thách dịch 84</a></td>
+					 		</tr>
+					 		<tr>
+					 			<td><a href="#">Thử thách dịch 83</a></td>
+					 		</tr>
+					 		<tr>
+					 			<td><a href="#">Thử thách dịch 82</a></td>
+					 		</tr>
+					 		<tr>
+					 			<td><a href="#">Thử thách dịch 81</a></td>
+					 		</tr>
+					 		<tr>
+					 			<td><a href="#">Có bạn post lên FB câu này, mọi người dịch chung nhé :)</a></td>
+					 		</tr>
+					 	</table>
+					 </div>
+					 <div id="menu1" class="tab-pane fade menu2 in active">
+					 	<a href="#" class="btn btn-danger">TU VUNG TIENG ANH VE TRIET HOC</a>
+					 	<a href="#" class="btn btn-danger">TU VUNG TIENG ANH VE XAY DUNG</a>
+					 	<a href="#" class="btn btn-danger">TU VUNG VE TRIET HOC</a>
+					 	<a href="#" class="btn btn-danger">TU VUNG TIENG ANH VE TRUONG</a>
+					 	<a href="#" class="btn btn-danger">TỪ VỰNG TIẾNG ANH VỀ VŨ TRỤ</a>
+					 	<a href="#" class="btn btn-danger">TỪ VỰNG TIẾNG ANH VỀ GIA ĐÌNH</a>
+					 	<a href="#" class="btn btn-danger">TỪ VỰNG VỀ GIA ĐÌNH</a>
+					 	<a href="#" class="btn btn-danger">TỪ VỰNG VỀ HẠT</a>
+					 	<a href="#" class="btn btn-danger">VARIETY VÀ DIVERSITY</a>
+					 	<a href="#" class="btn btn-danger">VŨ TRỤ BẰNG TIẾNG ANH</a>
+					 	<a href="#" class="btn btn-danger">XƯNG HÔ TRONG TIẾNG ANH</a>
+					 </div>
+					 <div id="menu2" class="tab-pane fade menu3">
+					 	<h5><b><img src="cmt1.jfif" width="30px"> MR. THI:</b></h5>
+					 	<a href="#"><div class="cmt">Các bạn có thắc mắc gì cứ comment nhé!</div></a><br>
+					 	<h5><b><img src="cmt2.png" width="30px"> ANONYMOUS:</b></h5>
+					 	<a href="#"><div class="cmt">Bạn vào đọc các bài học mỗi ngày nhé, chỗ mào thắc mắc bạn cứ comment nhé!</div></a><br>
+					 	<h5><b><img src="cmt3.png" width="30px"> ITELS MR THI:</b></h5>
+					 	<a href="#"><div class="cmt">Câu IF loại 2 thì vế đầu vậy chuẩn, vế sau phải có WOULD > they would still choose to live...</div></a>
+					 </div>
+				</div>
+			</div>
+			<div class="well text-center">
+				NGÂN HÀNG BÀI TẬP
+			</div>
+			<table class="table">
+				<tr>
+					<td><a href="#"><img src="nhbt.jpg" width="100px"></a></td>
+					<td><a href="#"><h5><b>ĐỀ THI ITELS LISTENING 10</b></h5></a></td>
+				</tr>
+				<tr>
+					<td><a href="#"><img src="nhbt.jpg" width="100px"></a></td>
+					<td><a href="#"><h5><b>ĐỀ THI ITELS LISTENING 9</b></h5></a></td>
+				</tr>
+				<tr>
+					<td><a href="#"><img src="nhbt.jpg" width="100px"></a></td>
+					<td><a href="#"><h5><b>ĐỀ THI ITELS LISTENING 8</b></h5></a></td>
+				</tr>
+				<tr>
+					<td><a href="#"><img src="nhbt.jpg" width="100px"></a></td>
+					<td><a href="#"><h5><b>ĐỀ THI ITELS LISTENING 7</b></h5></a></td>
+				</tr>
+				<tr>
+					<td><a href="#"><img src="nhbt.jpg" width="100px"></a></td>
+					<td><a href="#"><h5><b>ĐỀ THI ITELS LISTENING 6</b></h5></a></td>
+				</tr>
+			</table>
+			<div class="thumbnail">
+				<a href="#"><img src="tuyennv.png" width="100%"></a>
+			</div>
+			<div class="well text-center">
+				CHỌN CHUYÊN MỤC CẦN ĐẾN
+			</div>
+			<select class="form-control">
+				<option>Chọn chuyên mục</option>
+				<option>PHÁT ÂM</option>
+				<option>TỪ VỰNG</option>
+				<option>NGỮ PHÁP</option>
+				<option>NGÂN HÀNG BÀI TẬP</option>
+				<option>KINH NGHIỆM HỌC</option>
+				<option>THAM KHẢO THÊM</option>
+				<option>GIẢI TRÍ</option>
+				<option>HỎI ĐÁP</option>
+			</select>
+			<div class="well text-center">
+				HỎI ĐÁP
+			</div>
+			<div class="panel-default">
+				<div class="panel-body">
+					<a href="#"><img src="hoi.jpg" width="100%"></a>
+				</div>
+				<div class="panel-body">
+					<a href="#"><h3><b>Thử thách dịch 89</b></h3></a>
+					<p>Bạn hãy nhanh tay viết câu dịch tiếng Anh vào comment nhé! Tất cả comment đều sẽ nhận được feedback.</p>
+				</div>
+			</div>
+			<table class="table cuoi">
+				<tr>
+					<td><a href="#"><img src="e2.png" width="100px"></a></td>
+					<td><a href="#"><h5><b>Những thành ngữ trong tiếng Anh cơ bản nhất</b></h5></a></td>
+				</tr>
+				<tr>
+					<td><a href="#"><img src="e2.png" width="100px"></a></td>
+					<td><a href="#"><h5><b>22 Thành ngữ tiếng Anh có liên quan đến mắt</b></h5></a></td>
+				</tr>
+				<tr>
+					<td><a href="#"><img src="e2.png" width="100px"></a></td>
+					<td><a href="#"><h5><b>100 Phrasal Verb quan trọng nhất trong tiếng Anh</b></h5></a></td>
+				</tr>
+				<tr>
+					<td><a href="#"><img src="e3.jpg" width="100px"></a></td>
+					<td><a href="#"><h5><b>Năm con Chó học thành ngữ tiếng Anh có từ Dog</b></h5></a></td>
+				</tr>
+				<tr>
+					<td><a href="#"><img src="c4.png" width="100px"></a></td>
+					<td><a href="#"><h5><b>Bí quyết giỏi tiếng Anh thật sự</b></h5></a></td>
+				</tr>
+			</table>
+		</div>
+	</div>
+</div>
+<div class="container row10">
+</div>
+<div class="container">
+	<div class="row row9 text-center">
+		<p>Copyright © 2018 | TiengAnhOnline.Com</p>
+	</div>
+</div>
+</body>
+</html>
